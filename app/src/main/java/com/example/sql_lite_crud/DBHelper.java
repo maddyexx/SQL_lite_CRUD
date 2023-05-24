@@ -60,7 +60,7 @@ public class DBHelper extends SQLiteOpenHelper{
     public void updateContact(ContactModel contactModel){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(KEY_PHONE_NUMBER, contactModel.phone_no);
+        cv.put(KEY_NAME, contactModel.name);
         db.update(TABLE_CONTACT, cv, KEY_ID+" = "+contactModel.id, null);
 
     }
